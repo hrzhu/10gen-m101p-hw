@@ -113,7 +113,7 @@ class BlogPostDAO:
         try:
             last_error = {'n':-1}           # this is here so the code runs before you fix the next line
             # XXX HW 3.3 Work here to add the comment to the designated post
-
+            self.posts.update({'permalink': permalink}, {'$push' : {'comments': comment}})
 
             return last_error['n']          # return the number of documents updated
 
