@@ -69,7 +69,7 @@ class BlogPostDAO:
         cursor = []         # Placeholder so blog compiles before you make your changes
 
         # XXX HW 3.2 Work here to get the posts
-        cursor = self.posts.find().limit(num_posts)
+        cursor = self.posts.find().sort('date',-1).limit(num_posts)
 
         l = []
 
